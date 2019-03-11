@@ -6,13 +6,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 
-public class TestReflectionVsSynapseJava {
+public class TestReflectionVsSynapse {
 
     @Test
-    public void doRegular() {
+    public void doSynapse() {
         long start = System.currentTimeMillis();
         for (int i = 0; i < 1000000; i++) {
-            FeatureManager.initFeature("com.synapse.MainActivityJava","functionA", "dfs", 2);
+            FeatureManager.initFeature("com.synapse.MainActivityJava", "functionA", "dfs", 2);
         }
         System.out.println(System.currentTimeMillis() - start);
     }

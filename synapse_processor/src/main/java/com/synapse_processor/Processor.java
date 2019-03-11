@@ -5,7 +5,6 @@ import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 import com.synapse_annotations.Feature;
-
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.Filer;
 import javax.annotation.processing.ProcessingEnvironment;
@@ -18,11 +17,11 @@ import java.util.TreeSet;
 
 public class Processor extends AbstractProcessor {
 
-
-    private Filer filer;
     private static final String PARAMETERS = "parameters";
     private static final String CLASS_NAME = "className";
     private static final String METHOD_NAME = "methodName";
+
+    private Filer filer;
 
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
