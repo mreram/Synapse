@@ -1,7 +1,7 @@
 # Synapse
 Android module connector
 
-<img height="350" src="./repo_files/logo.png"/>
+<img src="./repo_files/logo.png"/>
 
 Synapse using annotation processing for finding and calling methods in classes.
 
