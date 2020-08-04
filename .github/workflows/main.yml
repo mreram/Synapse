@@ -1,0 +1,23 @@
+name: build action
+
+on:
+  push:
+    branches:
+      - 'master'
+      - 'develop'
+
+
+jobs:
+  test:
+    name: Generate apk
+    runs-on: ubuntu-18.04
+
+    steps:
+    - name: send custom message
+      uses: appleboy/telegram-action@master
+      with:
+       to: ${{ secrets.TELEGRAM_TO }}
+       token: ${{ secrets.TELEGRAM_TOKEN }}
+       message: |
+         The test event triggered final step.
+         echo This event is a pull request that had an assignee removed.
